@@ -9,12 +9,16 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/katia/Desktop/CookBook2/src/Controller/CategoriesController.php</code></li>
-        <li>Your template at <code>C:/Users/katia/Desktop/CookBook2/templates/categories/index.html.twig</code></li>
-    </ul>
+  
+     <h5> {% for item in categories %}
+     <div class="example-wrapper">
+   <div class="card border-0 shadow-sm">
+          <div class="text-center">
+            <a href={{ path("app_categorie", { id: item.id } )}} >{{ item.nomCategorie }}</a>
+            
+          </div>
+     </div>
+     </div>
+  {% endfor %}</h5>  
 </div>
 {% endblock %}
