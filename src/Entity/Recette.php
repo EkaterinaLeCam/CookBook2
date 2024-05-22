@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Entity;
-
+use App\Entity\Ingredient;
 use App\Repository\RecetteRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -19,7 +19,7 @@ class Recette
     #[ORM\Column(length: 255)]
     private ?string $nomRecette = null;
 
-    #[ORM\ManyToOne(mappedBy: 'recettes', targetEntity: Ingredient::class, cascade: ['persist'])]
+    #[ORM\ManyToOne(inversedBy: 'recettes', targetEntity: Ingredient::class, cascade:['persist'])]
     private ?Ingredient $Ingredient = null;
 
     #[ORM\Column(type: Types::TEXT)]

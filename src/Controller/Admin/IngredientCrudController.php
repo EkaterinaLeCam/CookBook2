@@ -21,8 +21,10 @@ class IngredientCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
-            TextField::new('nomIngredient')->setHelp('Veuillez entrer le nom de l\'ingrédient'),
-            IntegerField::new('quantite')->setHelp('Veuillez entrer la quantité'),
+            TextField::new('nomIngredient')
+            ->setHelp('farine, lait'),
+            IntegerField::new('quantite')
+            ->setHelp('mettez un chiffre'),
             TextField::new('mesure')->setHelp('Veuillez entrer l\'unité de mesure, par exemple, kilogramme, gramme, litre, etc.'),
             
         ];

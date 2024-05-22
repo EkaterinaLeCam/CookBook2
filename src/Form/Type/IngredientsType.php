@@ -30,11 +30,6 @@ class IngredientsType extends AbstractType
             'help' => 'kilogramme, gramme, cuillère à soupe, cuillère à café, millilitre, litre',
         ]);
 
-           
-            
-     
-        
-
     
     }
 
