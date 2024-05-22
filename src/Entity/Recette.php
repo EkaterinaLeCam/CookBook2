@@ -19,7 +19,7 @@ class Recette
     #[ORM\Column(length: 255)]
     private ?string $nomRecette = null;
 
-    #[ORM\ManyToOne(inversedBy: 'recettes')]
+    #[ORM\ManyToOne(mappedBy: 'recettes', targetEntity: Ingredient::class, cascade: ['persist'])]
     private ?Ingredient $Ingredient = null;
 
     #[ORM\Column(type: Types::TEXT)]
